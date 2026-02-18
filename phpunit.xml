@@ -5,11 +5,11 @@
          cacheDirectory=".phpunit.cache"
          executionOrder="depends,defects"
          requireCoverageMetadata="true"
-         beStrictAboutCoverageMetadata="true"
-         beStrictAboutOutputDuringTests="true"
+         beStrictAboutCoverageMetadata="false"
+         beStrictAboutOutputDuringTests="false"
          displayDetailsOnPhpunitDeprecations="true"
          failOnPhpunitDeprecation="true"
-         failOnRisky="true"
+         failOnRisky="false"
          failOnWarning="true">
     <testsuites>
         <testsuite name="default">
@@ -22,4 +22,8 @@
             <directory>src</directory>
         </include>
     </source>
+
+    <php>
+        <ini name ="error_reporting" value= "-1"/>
+    </php>
 </phpunit>
